@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slayt Gösterisi</title>
+    <style>
+        h1 {
+            color: aquamarine;
+            margin-bottom: 20px;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .container {
+            width: 80%;
+            overflow: hidden;
+            border: 6px solid rgb(68, 67, 67);
+            box-sizing: border-box;
+        }
+
+        .gallery {
+            position: relative;
+            width: 400%;
+            left: 0;
+            animation: 10s slide infinite; /*"slide" adlı bir animasyon uygular; animasyon süresi 10 saniyedir ve sonsuza kadar(infinite) tekrar eder*/
+        }
+
+        .gallery img {
+            width: 25%;
+            float: left;
+        }
+
+        /* "slide" adlı bir anahtar kare animasyonu tanımlar; bu animasyon "gallery" sınıfına sahip elementleri yatay olarak hareket ettirir */
+        @keyframes slide {
+
+            /* Animasyon süresinin %0'ı ve %20'sinde sol özellik %0 olarak ayarlanır */
+            0% {
+                left: 0%;
+            }
+
+            20% {
+                left: 0%;
+            }
+
+            /* Animasyon süresinin %25'i ve %45'inde sol özellik %-100 olarak ayarlanır */
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            /* Animasyon süresinin %50'si ve %70'inde sol özellik %-200 olarak ayarlanır */
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Slayt Gösterisi</h1>
+    <div class="container">
+        <div class="gallery">
+            <img src="manzara1.jpg">
+            <img src="manzara2.jpg">
+            <img src="manzara3.jpg">
+        </div>
+    </div>
+</body>
+
+</html>
